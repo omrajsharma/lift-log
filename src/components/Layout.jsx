@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import BackupBanner from './BackupBanner'
+import UpdateBanner from './UpdateBanner'
 
 export default function Layout({ children }) {
   const location = useLocation()
@@ -9,7 +10,8 @@ export default function Layout({ children }) {
     <div className="mx-auto flex min-h-dvh max-w-lg flex-col">
       <header className="sticky top-0 z-10 border-b border-neutral-200 bg-neutral-50/95 px-4 py-3 backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/95">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-lg font-semibold tracking-tight">
+          <Link to="/" className="flex items-center gap-2 text-lg font-semibold tracking-tight">
+            <img src="/pwa-192.png" alt="" className="h-8 w-8 rounded-lg" />
             Strength Tracker
           </Link>
           <Link
@@ -25,6 +27,7 @@ export default function Layout({ children }) {
         </div>
       </header>
 
+      <UpdateBanner />
       <BackupBanner />
 
       <main className="flex-1 px-4 py-4">{children}</main>

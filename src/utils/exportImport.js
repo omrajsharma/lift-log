@@ -53,7 +53,14 @@ export function validateImportData(data) {
   return { valid: true }
 }
 
-export function downloadJson(data, filename = 'strength-tracker-backup.json') {
+export function getExportFilename(date = new Date()) {
+  const dd = String(date.getDate()).padStart(2, '0')
+  const mm = String(date.getMonth() + 1).padStart(2, '0')
+  const yyyy = date.getFullYear()
+  return `lift-log-${dd}-${mm}-${yyyy}.json`
+}
+
+export function downloadJson(data, filename = getExportFilename()) {
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')

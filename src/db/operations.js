@@ -85,7 +85,11 @@ export async function deleteLog(id) {
 
 export function getPersonalRecord(logs) {
   if (!logs.length) return null
-  return logs.reduce((max, log) => (log.weight > max.weight ? log : max), logs[0])
+  return logs.reduce((best, log) => {
+    if (log.weight > best.weight) return log
+    if (log.weight === best.weight && log.reps > best.reps) return log
+    return best
+  }, logs[0])
 }
 
 // Export / import
