@@ -12,7 +12,7 @@ export default function Layout({ children }) {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 text-lg font-semibold tracking-tight">
             <img src="/pwa-192.png" alt="" className="h-8 w-8 rounded-lg" />
-            Strength Tracker
+            Log Lift
           </Link>
           <Link
             to="/settings"

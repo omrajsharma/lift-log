@@ -12,9 +12,9 @@ export default defineConfig({
       injectRegister: false,
       includeAssets: ['logo.png', 'pwa-192.png', 'pwa-512.png', 'apple-touch-icon.png'],
       manifest: {
-        name: 'Strength Tracker',
-        short_name: 'Strength',
-        description: 'Offline strength training log',
+        name: 'Log Lift',
+        short_name: 'Log Lift',
+        description: 'Offline workout log',
         theme_color: '#171717',
         background_color: '#fafafa',
         display: 'standalone',

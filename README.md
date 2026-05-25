@@ -1,6 +1,6 @@
-# Strength Tracker
+# Log Lift
 
-Offline-first Progressive Web App for logging strength training. No backend — all data lives in IndexedDB on your device.
+Offline-first Progressive Web App for logging workouts. No backend — all data lives in IndexedDB on your device.
 
 ## Tech stack
 
