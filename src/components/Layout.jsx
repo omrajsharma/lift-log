@@ -8,7 +8,7 @@ export default function Layout({ children }) {
 
   return (
     <div className="mx-auto flex min-h-dvh max-w-lg flex-col">
-      <header className="sticky top-0 z-10 border-b border-neutral-200 bg-neutral-50/95 px-4 py-3 backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/95">
+      <header className="sticky top-0 z-10 border-b border-neutral-200 bg-neutral-50/95 px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))] backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/95">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 text-lg font-semibold tracking-tight">
             <img src="/pwa-192.png" alt="" className="h-8 w-8 rounded-lg" />
@@ -30,7 +30,7 @@ export default function Layout({ children }) {
       <UpdateBanner />
       <BackupBanner />
 
-      <main className="flex-1 px-4 py-4">{children}</main>
+      <main className="flex-1 px-4 py-4 pb-[max(1rem,env(safe-area-inset-bottom))]">{children}</main>
     </div>
   )
 }
